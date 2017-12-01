@@ -74,7 +74,7 @@ export default function computeStyle(data, options) {
     left = offsets.left;
   }
   if (gpuAcceleration && prefixedProperty) {
-    styles[prefixedProperty] = `translate3d(${left}px, ${top}px, 0)`;
+    styles[prefixedProperty] = `translateX(${left}px) translateY(${top}px)`;
     styles[sideA] = 0;
     styles[sideB] = 0;
     styles.willChange = 'transform';
